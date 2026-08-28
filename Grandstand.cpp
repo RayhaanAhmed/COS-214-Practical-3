@@ -1,4 +1,4 @@
-#include <leaves/Grandstand.h>
+#include <Grandstand.h>
 void Grandstand::open() {
     std::cout << m_name << " opened.\n";
 }

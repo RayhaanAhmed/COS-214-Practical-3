@@ -1,4 +1,4 @@
-#include <leaves/MedicalStation.h>
+#include <MedicalStation.h>
 void MedicalStation::open() {
     std::cout << m_name << " opened.\n";
 }
