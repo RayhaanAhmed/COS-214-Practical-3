@@ -1,11 +1,11 @@
 #include <EventGroup.h>
 
-#include <leaves/MarshalPost.h>
-#include <leaves/MedicalStation.h>
-#include <leaves/PitGarage.h>
-#include <leaves/RunOffArea.h>
-#include <leaves/TimingPoint.h>
-#include <leaves/Grandstand.h>
+#include <MarshalPost.h>
+#include <MedicalStation.h>
+#include <PitGarage.h>
+#include <RunOffArea.h>
+#include <TimingPoint.h>
+#include <Grandstand.h>
 
 int main() {
 

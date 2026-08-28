@@ -1,4 +1,5 @@
-#pragma once
+#ifndef EVENT_GROUP_H
+#define EVENT_GROUP_H
 #include <EventComponent.h>
 #include <vector>
 #include <string>
@@ -15,3 +16,4 @@ class EventGroup : public EventComponent {
     virtual void reportStatus() const override;
     virtual void getCapacity() const override;
 };
+#endif

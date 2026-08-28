@@ -1,4 +1,4 @@
-#include <leaves/TimingPoint.h>
+#include <TimingPoint.h>
 void TimingPoint::open() {
     std::cout << m_name << " opened.\n";
 }

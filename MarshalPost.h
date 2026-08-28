@@ -1,12 +1,14 @@
-#pragma once
+#ifndef MARSHALPOST_H
+#define MARSHALPOST_H
 #include <EventUnit.h>
-class TimingPoint : public EventUnit {
+class MarshalPost : public EventUnit {
     private:
     public:
-    virtual ~TimingPoint();
-    TimingPoint(const std::string& name):EventUnit(name){}
+    virtual ~MarshalPost();
+    MarshalPost(const std::string& name):EventUnit(name){}
     virtual void open() override;
     virtual void close() override;
     virtual void reportStatus() const override;
     virtual void getCapacity() const override;
 };
+#endif

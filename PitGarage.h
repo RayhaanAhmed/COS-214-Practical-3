@@ -1,12 +1,14 @@
-#pragma once
+#ifndef PITGARAGE_H
+#define PITGARAGE_H
 #include <EventUnit.h>
-class RunOffArea : public EventUnit {
+class PitGarage : public EventUnit {
     private:
     public:
-    virtual ~RunOffArea();
-    RunOffArea(const std::string& name):EventUnit(name){}
+    virtual ~PitGarage();
+    PitGarage(const std::string& name):EventUnit(name){}
     virtual void open() override;
     virtual void close() override;
     virtual void reportStatus() const override;
     virtual void getCapacity() const override;
 };
+#endif

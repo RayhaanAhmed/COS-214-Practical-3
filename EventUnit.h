@@ -1,4 +1,5 @@
-#pragma once
+#ifndef EVENT_UNIT_H
+#define EVENT_UNIT_H
 #include <EventComponent.h>
 #include <string>
 
@@ -11,3 +12,4 @@ public:
     virtual void reportStatus() const = 0;
     virtual void getCapacity() const = 0;
 };
+#endif

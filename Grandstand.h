@@ -1,12 +1,14 @@
-#pragma once
+#ifndef GRANDSTAND_H
+#define GRANDSTAND_H
 #include <EventUnit.h>
-class MarshalPost : public EventUnit {
+class Grandstand : public EventUnit {
     private:
     public:
-    virtual ~MarshalPost();
-    MarshalPost(const std::string& name):EventUnit(name){}
+    virtual ~Grandstand();
+    Grandstand(const std::string& name):EventUnit(name){}
     virtual void open() override;
     virtual void close() override;
     virtual void reportStatus() const override;
     virtual void getCapacity() const override;
 };
+#endif

@@ -1,12 +1,14 @@
-#pragma once
+#ifndef RUNOFFAREA_H
+#define RUNOFFAREA_H
 #include <EventUnit.h>
-class MedicalStation : public EventUnit {
+class RunOffArea : public EventUnit {
     private:
     public:
-    MedicalStation(const std::string& name):EventUnit(name){}
-    virtual ~MedicalStation();
+    virtual ~RunOffArea();
+    RunOffArea(const std::string& name):EventUnit(name){}
     virtual void open() override;
     virtual void close() override;
     virtual void reportStatus() const override;
     virtual void getCapacity() const override;
 };
+#endif

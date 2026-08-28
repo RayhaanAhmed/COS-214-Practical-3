@@ -1,3 +1,5 @@
+#ifndef EVENT_GROUP_CPP
+#define EVENT_GROUP_CPP
 #include <EventGroup.h>
 void EventGroup::add(EventComponent* c)
 {
@@ -32,3 +34,4 @@ void EventGroup::reportStatus() const {
 void EventGroup::getCapacity() const {
 
 }
+#endif

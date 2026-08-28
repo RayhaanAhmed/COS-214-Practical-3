@@ -1,5 +1,5 @@
-#pragma once
-#include <EventNotice.h>
+#ifndef EVENT_COMPONENT_H
+#define EVENT_COMPONENT_H
 #include <iostream>
 #include <string>
 class EventComponent {
@@ -14,3 +14,4 @@ public:
     virtual void reportStatus() const = 0;
     virtual void getCapacity() const = 0;
 };
+#endif
