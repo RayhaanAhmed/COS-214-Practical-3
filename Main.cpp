@@ -7,7 +7,7 @@
 #include "PitGarage.h"
 #include "RunOffArea.h"
 #include "TimingPoint.h"
-#include "Grandstand.h"
+#include "Grandstand.h" 
 #include "SafetyCar.h" // spec 4.4 original feature (7th leaf type)
 
 int main() {
@@ -20,7 +20,7 @@ int main() {
 
     trackZone->add(new MarshalPost("Marshal Post 1"));
     trackZone->add(new MarshalPost("Marshal Post 2"));
-    trackZone->add(new TimingPoint("Timing Point 1"));
+    trackZone->add(new TimingPoint("Timing Point 1")); 
     trackZone->add(new TimingPoint("Timing Point 2"));
 
     PitGarage* garage1 = new PitGarage("Pit Garage 1"); //default capacity 4
