@@ -20,15 +20,43 @@ class Grandstand : public EventComponent, public Observer {
     static constexpr double CAPACITY_THRESHOLD = 0.9;
 
 public:
+/**
+     * @brief Constructs a grandstand.
+     * @param name Display name for this grandstand.
+     * @param capacity Maximum spectator capacity.
+     */
     Grandstand(const std::string& name, int capacity = 300);
+
+    /// @brief Virtual destructor (Leaf, no owned children).
     virtual ~Grandstand();
 
-    virtual void open() override;
-    virtual void close() override;
-    virtual void reportStatus() const override;
-    virtual int getCapacity() const override;
-    virtual void update(const EventNotice& notice) override;
+    /// @brief Marks the grandstand open.
+    virtual void open();
 
+    /// @brief Marks the grandstand closed.
+    virtual void close();
+
+    /// @brief Prints this grandstand's current status.
+    virtual void reportStatus() const;
+
+    /**
+     * @brief Returns this grandstand's spectator capacity.
+     * @return int maximum capacity.
+     */
+    virtual int getCapacity() const;
+
+    /**
+     * @brief Reacts to EVACUATE (closes), CAPACITY_ALERT (checks occupancy
+     * against CAPACITY_THRESHOLD), RESUME (reopens), stays open through
+     * YELLOW_FLAG/WEATHER_ALERT.
+     * @param notice The notice received from this grandstand's Subject.
+     */
+    virtual void update(const EventNotice& notice);
+
+    /**
+     * @brief Sets the current spectator occupancy.
+     * @param count Number of spectators currently present.
+     */
     void setOccupancy(int count);
 };
 #endif
