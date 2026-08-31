@@ -39,6 +39,7 @@ public:
      * @brief Deregisters an observer.
      * If the observer isn't currently registered, this is a no-op
      * covers both double-detach and detaching an unregistered observer.
+     * @param observer Observer to deregister.
      */
     virtual void detach(Observer* observer) {
         m_observers.erase(std::remove(m_observers.begin(), m_observers.end(), observer), m_observers.end());
@@ -48,6 +49,7 @@ public:
      * @brief Pushes a notice to every currently registered observer.
      * Iterates a snapshot copy so an observer that attaches/detaches
      * during its own update() cannot invalidate iteration in progress.
+     * @param notice The notice to push to every registered observer.
      */
     virtual void notify(const EventNotice& notice) {
         std::vector<Observer*> snapshot = m_observers;
@@ -56,6 +58,10 @@ public:
         }
     }
 
+    /**
+     * @brief Returns how many observers are currently registered.
+     * @return size_t count of registered observers.
+     */
     size_t observerCount() const { return m_observers.size(); }
 };
 #endif

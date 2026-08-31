@@ -1,0 +1,25 @@
+# Minimal Doxyfile for EventFlow (COS 214 Practical 3)
+# Everything not listed here just uses Doxygen's built-in defaults.
+
+PROJECT_NAME           = "EventFlow"
+PROJECT_BRIEF          = "Live Event Coordination Engine - COS 214 Practical 3"
+OUTPUT_DIRECTORY       = docs
+
+INPUT                  = .
+FILE_PATTERNS          = *.h *.cpp
+RECURSIVE              = NO
+
+EXTRACT_ALL            = NO
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+WARNINGS               = YES
+WARN_IF_UNDOCUMENTED   = YES
+WARN_IF_DOC_ERROR      = YES
+WARN_NO_PARAMDOC       = YES
+WARN_AS_ERROR          = NO
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+
+QUIET                  = NO

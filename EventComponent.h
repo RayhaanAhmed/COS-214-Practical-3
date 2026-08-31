@@ -16,13 +16,22 @@ protected:
     std::string m_name;
 
 public:
+/**
+     * @brief Constructs a component with the given display name.
+     * @param name Human-readable name for this component.
+     */
     EventComponent(const std::string& name) : m_name(name) {};
 
     /// @brief Every polymorphic base must have a virtual destructor.
-    virtual ~EventComponent() = default;
+    virtual ~EventComponent(){};
 
+    /// @brief Opens this component (and, for a Composite, its children)
     virtual void open() = 0;
+
+    /// @brief Closes this component (and, for a Composite, its children)
     virtual void close() = 0;
+
+    /// @brief Prints this component's current status.
     virtual void reportStatus() const = 0;
 
     /**
@@ -31,6 +40,10 @@ public:
      */
     virtual int getCapacity() const = 0;
 
+    /**
+     * @brief Returns this component's display name.
+     * @return const reference to the stored name.
+     */
     const std::string& getName() const { return m_name; }
 };
 #endif

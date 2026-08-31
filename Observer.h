@@ -11,7 +11,7 @@ class EventNotice;
  */
 class Observer {
 public:
-    virtual ~Observer() = default;
+    virtual ~Observer(){};
 
     /**
      * @brief Called by a Subject when a relevant notice is issued.
